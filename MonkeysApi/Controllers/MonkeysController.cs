@@ -20,6 +20,7 @@ namespace MonkeysApi.Controllers
             if (developer == null) return BadRequest();
 
             context.Developers.Add(developer);
+            context.SaveChanges();
 
             var monkeys = context.Monkeys.ToList();
 
